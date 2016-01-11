@@ -1,0 +1,34 @@
+/* copyright insane0hflex 2016 */
+
+.clear {
+    clear: both;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.grid-col-12,
+.grid-col-9,
+.grid-col-6,
+.grid-col-3 {
+    margin: 10px;
+    height:20px;
+    background-color: #eeeeee;
+}
+
+
+footer {
+    margin-top: 30px;
+    text-align:center;
+    margin: 0 auto;
+}
+
+
+.list-horizontal {
+
+}
+
+
+
