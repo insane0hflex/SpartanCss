@@ -1,11 +1,23 @@
 /* copyright insane0hflex 2016 */
+html {
+
+}
+
+body {
+  font-family: Verdana, Arial, sans-serif;
+  color: #111111;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 20px 0;
+}
 
 .clear {
     clear: both;
 }
 
 .container {
-    max-width: 1080px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -13,9 +25,7 @@
 .grid-col-9,
 .grid-col-6,
 .grid-col-3 {
-    margin: 10px;
-    height:20px;
-    background-color: #eeeeee;
+    padding: 0 20px;
 }
 
 
@@ -25,10 +35,31 @@ footer {
     margin: 0 auto;
 }
 
+a {
+    color: #1EAEDB;
+    
+}
+a:hover {
+    color: #0FA0CE;
+    
+}
+
+
+
+/* Helper/Utility classes */
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
 
 .list-horizontal {
-
+    display: inline;
 }
+
+
 
 
 
