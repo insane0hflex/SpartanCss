@@ -2,81 +2,133 @@
 <html>
 <head>
     <title>Spartan CSS Demo</title>
-    <link rel="stylesheet" href="css/spartan.css" />
+    <link type="text/css" rel="stylesheet" href="css/spartan.css" />
+
+    <!-- Styles to show various elements (such as a background for the grid classes) -->
+    <style>
+        .grid-demo {
+            background-color: #CCCCCC;
+            padding: 2%;
+            margin: 2% 0;
+        }
+
+        .buttonAndInputExamples > * {
+            margin-left: 2%;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-
-        <h1>Spartan CSS (WIP!)</h1>
-        <p>
-            A minimalist CSS framework for modern browsers. Inspired by Skeleton CSS. Download a <a href="">minified Spartan CSS</a> - size: 9000kb.
-        </p>
-
-        <hr />
-
-        <!-- Grid demo -->
-        <h2>Grid Demo</h2>
-        <div class="grid-col-12">
-            grid-col-12
-        </div>
-
-        <div class="grid-col-6">
-            grid-col-6
-        </div>
-        <div class="grid-col-6">
-            grid-col-6
-        </div>
-
-        <div class="grid-col-3">
-            grid-col-3
-        </div>
-        <div class="grid-col-3">
-            grid-col-3
-        </div>
-        <div class="grid-col-3">
-            grid-col-3
-        </div>
-        <div class="grid-col-3">
-            grid-col-3
-        </div>
-
-        <div class="grid-col-9">
-            grid-col-9
-        </div>
-        <div class="grid-col-3">
-            grid-col-3
-        </div>
-
-        <div class="grid-col-3">
-            grid-col-3
-        </div>
-        <div class="grid-col-9">
-            grid-col-9
-        </div>
-
-
         <div class="row">
-            <div>
-                <button>Button Example</button>
+            <h1>Spartan CSS (WIP!)</h1>
+            <p>
+                A minimalist CSS framework for modern browsers. Inspired by Skeleton CSS. Download a <a href="">minified Spartan CSS</a> - size: 999 bytes minified.
+            </p>
+            <p>
+                Simply <a href="">download the minified Spartan CSS</a> and include it like so:
+            </p>
+            <pre>&lt;link type="text/css" rel="stylesheet" href="css/spartan.min.css"/&gt;</pre>
+
+            <p>
+                This is my own framework that I developed because I like Skeleton CSS's basic ideas, but ultimately the font and excessive padding are things I do not like. So, I made my own smaller CSS mini-framework for my own projects. Hopefully others will like it and potentially use it as well.
+            </p>
+
+            <p>
+            </p>
+
+            <hr />
+            <!-- Grid demo -->
+            <h2>Grid Demo</h2>
+            <div class="grid-col-12 grid-demo">
+                grid-col-12
+            </div>
+
+            <br />
+            <div class="grid-col-6 grid-demo">
+                grid-col-6
+            </div>
+
+            <br />
+            <div class="grid-col-6 grid-demo">
+                grid-col-6
+            </div>
+
+            <div class="grid-col-3 grid-demo">
+                grid-col-3
+            </div>
+            <div class="grid-col-3 grid-demo">
+                grid-col-3
+            </div>
+            <div class="grid-col-3 grid-demo">
+                grid-col-3
+            </div>
+            <div class="grid-col-3 grid-demo">
+                grid-col-3
+            </div>
+
+            <br />
+            <div class="grid-col-9 grid-demo">
+                grid-col-9
+            </div>
+            <div class="grid-col-3 grid-demo">
+                grid-col-3
+            </div>
+
+            <br />
+            <div class="grid-col-3 grid-demo">
+                grid-col-3
+            </div>
+            <div class="grid-col-9 grid-demo">
+                grid-col-9
             </div>
         </div>
 
+        <hr />
+        <div class="row">
+            <button>Button Example</button>
+
+            <select name="selectExample">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+            </select>
+            <input type="email" name="email" value="first.last@email.com" />
+            <input type="password" value="password" />
+            <input type="submit" value="Log In">
+
+            <!--<input type="number" name="number" value="123456789" />
+            <input type="search" name="search" value="Search" />
+            <input type="tel" name="telephone" value="Phone 123-123-1234" />
+            <input type="url" name="url" value="http://www.google.com/" />
+            <input type="email" name="emailExample" value="firstlast@example.com" />-->
+
+            <hr />
+
+            <div class="row">
+
+                <textarea>Text area content...</textarea>
+
+
+            </div>
+
+        </div>
 
     </div>
+    <hr />
+    <footer>
 
-<footer>
-    <p>
-        &copy; insane0hflex 2016
-    </p>
-
-    <ul class="list-horizontal">
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Contact</a></li>
-    </ul>
-
-</footer>
-
+        <p>
+            Foooter example
+        </p>
+        <p>
+            &copy; insane0hflex 2016
+        </p>
+        <ul class="list-horizontal">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </footer>
 
 </body>
 </html>
