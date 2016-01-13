@@ -1,7 +1,24 @@
 /* copyright insane0hflex 2016 */
+
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+
 html {
 
 }
+
 
 body {
   font-family: Verdana, Arial, sans-serif;
@@ -9,7 +26,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 20px 0;
+    margin: 2% 0;
 }
 
 .clear {
@@ -19,30 +36,65 @@ h1, h2, h3, h4, h5, h6 {
 .container {
     max-width: 960px;
     margin: 0 auto;
+    display: inline-flexbox;
 }
 
 .row {
-    margin: 20px 0;
+    margin: 2% 0;
+}
+
+.container:after,
+.row:after,
+br:after,
+hr:after {
+    clear: both;
+    content: "";
+    display: table;
 }
 
 hr {
-    /* something */
+    margin: 2% 0;
 }
 
 
-
+/* consider just using flexbox properties for this...*/
 .grid-col-12,
 .grid-col-9,
 .grid-col-6,
 .grid-col-3 {
+    box-sizing: border-box;
+    margin-left: 1%;
+    float: left;
 }
+
+.grid-col-12:first-child,
+.grid-col-9:first-child,
+.grid-col-6:first-child,
+.grid-col-3:first-child {
+    margin-left: 0px;
+}
+
 
 .grid-col-12 {
-    
+    width: 100%;
+}
+.grid-col-9 {
+    width: 74%;
+}
+
+.grid-col-6 {
+    width: 48%;
+}
+.grid-col-3 {
+    width: 22%;
 }
 
 
-
+pre {
+    padding: 2%;
+    background-color: #EEEEEE;
+    color: black;
+}
 
 footer {
     margin-top: 30px;
@@ -52,13 +104,16 @@ footer {
 
 a {
     color: #1EAEDB;
-    
 }
 a:hover {
     color: #0FA0CE;
-    
 }
-
+a:visited {
+    color: #6f0fce;
+}
+a:visited:hover {
+    color: #4c1f79;
+}
 
 /* Helper/Utility classes */
 .float-right {
@@ -69,7 +124,8 @@ a:hover {
     float: left;
 }
 
-.list-horizontal {
+.list-horizontal li {
+    padding: 0 10px;
     display: inline;
 }
 
@@ -81,68 +137,97 @@ a:hover {
     margin: 0 auto;
 }
 
-.button,
 button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
     display: inline-block;
-    padding: 20px 30px;
+    padding: 15px 15px;
     color: black;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
     background-color: #eeeeee;
-    border: 1px solid #bbb;
-    text-shadow: 2px 2px #eee;
+    border: 1px solid #BBBBBB;
     cursor: pointer;
+    border-width: 2px;
     box-sizing: border-box;
 }
 
 
-.button:hover,
 button:hover,
 input[type="submit"]:hover,
 input[type="reset"]:hover,
-input[type="button"]:hover,
-.button:focus,
-button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus {
-    color: #333;
-    border-color: #888;
+input[type="button"]:hover {
+    color: #111111;
+    background-color: #c6eefb;
+    border-width: 2px;
+    border-color: #2055a9;
     outline: 0;
 }
 
-
-.button.button-primary,
-button.button-primary,
-input[type="submit"].button-primary,
-input[type="reset"].button-primary,
-input[type="button"].button-primary {
-    color: #FFF;
-    background-color: #33C3F0;
-    border-color: #33C3F0;
+/* remove drop down icon for select/options */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+select::-ms-expand {
+    display: none;
 }
 
 
-.button.button-primary:hover,
-button.button-primary:hover,
-input[type="submit"].button-primary:hover,
-input[type="reset"].button-primary:hover,
-input[type="button"].button-primary:hover,
-.button.button-primary:focus,
-button.button-primary:focus,
-input[type="submit"].button-primary:focus,
-input[type="reset"].button-primary:focus,
-input[type="button"].button-primary:focus {
-    color: #FFF;
-    background-color: #1EAEDB;
-    border-color: #1EAEDB;
+/* Forms */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+    padding: 15px 15px;
+    background-color: #FFFFFF;
+    border: 1px solid #D1D1D1;
 }
 
 
+textarea {
+    min-height: 65px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 100%;
+    font-family: Verdana, Arial, sans-serif; /* how come it doesnt use the body font family by default? */
+}
 
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid #33C3F0;
+    outline: 0;
+}
+
+label,
+legend {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
+fieldset {
+    padding: 0;
+    border-width: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline;
+}
 
 
