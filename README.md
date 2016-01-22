@@ -1,4 +1,4 @@
-#Spartan CSS
+#Spartan CSS __WIP__
 
 _A mean and lean responsive CSS solution to quickly style your webpages._
 
