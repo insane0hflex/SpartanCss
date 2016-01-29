@@ -1,14 +1,8 @@
-/* copyright insane0hflex 2016 */
-
-
-* {
-    border-radius: 0;
-}
+/* copyright MIT insane0hflex 2016 */
 
 html {
 
 }
-
 
 body {
   font-family: Verdana, Arial, sans-serif;
@@ -98,6 +92,7 @@ a {
 }
 a:hover {
     color: #0FA0CE;
+    text-decoration: none;
 }
 a:visited {
     color: #6f0fce;
@@ -134,7 +129,7 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
     display: inline-block;
-    padding: 15px 15px;
+    padding: 10px 15px;
     color: black;
     text-align: center;
     text-decoration: none;
@@ -159,14 +154,15 @@ input[type="button"]:hover {
 }
 
 /* remove drop down icon for select/options */
-select {
+/* idk why i removed it earlier..anyways looks a bit broken in IE but good in firefox + chrome */
+/* select {
     -webkit-appearance: none;
     -moz-appearance: none;
 }
 select::-ms-expand {
     display: none;
 }
-
+ */
 
 /* Forms */
 input[type="email"],
@@ -178,7 +174,7 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
-    padding: 15px 15px;
+    padding: 10px 15px;
     background-color: #FFFFFF;
     border: 1px solid #D1D1D1;
 }
@@ -190,7 +186,6 @@ textarea {
     padding-top: 6px;
     padding-bottom: 6px;
     width: 100%;
-    font-family: Verdana, Arial, sans-serif; /* how come it doesnt use the body font family by default? */
 }
 
 input[type="email"]:focus,
