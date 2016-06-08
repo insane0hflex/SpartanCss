@@ -1,0 +1,238 @@
+/* copyright MIT insane0hflex 2016 */
+
+html {
+
+}
+
+body {
+  font-family: Verdana, Arial, sans-serif;
+  color: #111111;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 2% 0;
+}
+
+.clear {
+    clear: both;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+}
+
+
+.row {
+    margin: 2% 0;
+}
+
+.container:after,
+.row:after,
+br:after,
+hr:after {
+    clear: both;
+    display: table;
+}
+
+hr {
+    margin: 2% 0;
+}
+
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; }
+}
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+
+    .container {
+        width: 80%;
+    }
+
+    .grid-col-12,
+    .grid-col-9,
+    .grid-col-6,
+    .grid-col-3 {
+        box-sizing: border-box;
+        margin-left: 1%;
+        float: left;
+    }
+
+    .grid-col-12:first-child,
+    .grid-col-9:first-child,
+    .grid-col-6:first-child,
+    .grid-col-3:first-child {
+        margin-left: 0px;
+    }
+
+
+    .grid-col-12 {
+        width: 100%;
+    }
+    .grid-col-9 {
+        width: 75%;
+    }
+
+    .grid-col-6 {
+        width: 50%;
+    }
+    .grid-col-3 {
+        width: 25%;
+    }
+
+}
+
+
+pre {
+    padding: 2%;
+    background-color: #EEEEEE;
+    color: black;
+    white-space: pre-wrap;
+}
+
+footer {
+    margin-top: 30px;
+    text-align:center;
+    margin: 0 auto;
+}
+
+a {
+    color: #1EAEDB;
+}
+a:hover {
+    color: #0FA0CE;
+    text-decoration: none;
+}
+a:visited {
+    color: #6f0fce;
+}
+a:visited:hover {
+    color: #4c1f79;
+}
+
+/* Helper/Utility classes */
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.list-horizontal li {
+    padding: 0 10px;
+    display: inline;
+}
+
+.text-center {
+    text-align:center;
+}
+
+.center {
+    margin: 0 auto;
+    display: block;
+}
+
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    display: inline-block;
+    padding: 10px 15px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #eeeeee;
+    border: 1px solid #BBBBBB;
+    cursor: pointer;
+    border-width: 2px;
+    box-sizing: border-box;
+}
+
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+    color: #111111;
+    background-color: #c6eefb;
+    border-width: 2px;
+    border-color: #2055a9;
+    outline: 0;
+}
+
+/* remove drop down icon for select/options */
+/* idk why i removed it earlier..anyways looks a bit broken in IE but good in firefox + chrome */
+/* select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+select::-ms-expand {
+    display: none;
+}
+ */
+
+/* Forms */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+    padding: 10px 15px;
+    background-color: #FFFFFF;
+    border: 1px solid #D1D1D1;
+}
+
+
+textarea {
+    min-height: 70px;
+    width: 100%;
+    max-width: 960px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    box-sizing: border-box; 
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border: 1px solid #33C3F0;
+    outline: 0;
+}
+
+label,
+legend {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
+fieldset {
+    padding: 0;
+    border-width: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline;
+}
+
+
